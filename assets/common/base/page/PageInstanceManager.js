@@ -2,7 +2,12 @@ let DynimicResHolder = require("../DynimicResHolder");
 let Base = require("../Base");
 let TaskTimer = require("../../baseUtil/TaskTimer");
 let animateJs = require("../../baseUtil/animateJs");
-
+/**
+ * 属于页面路由的一部分，负责具体加载，销毁页面和保存页面的引用
+ * @param {*} router 
+ * @param {*} rootNode 
+ * @param {*} modal 
+ */
 function PageInstanceManager(router, rootNode, modal) {
     Base.call(this);
     this.rootNode = rootNode;

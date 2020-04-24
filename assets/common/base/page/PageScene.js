@@ -1,6 +1,9 @@
 
 let BaseComponent = require("../BaseComponent");
 let pageRouter = require("./PageRouter");
+/**
+ * 页面路由的持有者。
+ */
 function PageScene(){
 
 };

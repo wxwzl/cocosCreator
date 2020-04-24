@@ -1,4 +1,6 @@
-
+/**
+ * 页面组件
+ */
 let Base = require("../Base");
 function Page(){
     Base.call(this);

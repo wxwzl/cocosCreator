@@ -11,6 +11,13 @@ function PageAction(method,params){
     this.method = method;
     this.param = params;
 };
+/**
+ * 页面路由，模拟android里的activity的栈管理模式，进行页面管理系统的设计，具体api参考浏览器的history对象
+ * 同时对这一模式进行拓展，使一个对象既是一个页面也可以是一个页面路由持有者，实现页面之间的嵌套管理。
+ * @param {*} pageScene 
+ * @param {*} rootNode 
+ * @param {*} modal 
+ */
 function PageRouter(pageScene,rootNode,modal){
     this.pageScene = pageScene;
     this.lastPage = null;
