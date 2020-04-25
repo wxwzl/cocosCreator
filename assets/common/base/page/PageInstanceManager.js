@@ -4,9 +4,9 @@ let TaskTimer = require("../../baseUtil/TaskTimer");
 let animateJs = require("../../baseUtil/animateJs");
 /**
  * 属于页面路由的一部分，负责具体加载，销毁页面和保存页面的引用
- * @param {*} router 
- * @param {*} rootNode 
- * @param {*} modal 
+ * @param {*} router  页面路由对象
+ * @param {*} rootNode 页面挂载的根节点
+ * @param {*} modal 提示弹窗，具有固定的几个api，如popUp轻提示框
  */
 function PageInstanceManager(router, rootNode, modal) {
     Base.call(this);
@@ -179,7 +179,7 @@ PageInstanceManager.prototype = {
             }
         }, this);
         this.instances = {};
-        timer.putTaskTimer(this.timer);
+        this.timer.clearTimer();
         this.resourceHolder.releaseAll();
     },
 };
